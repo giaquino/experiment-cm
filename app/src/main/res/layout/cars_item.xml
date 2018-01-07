@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+    <variable
+        name="vh"
+        type="com.giaquino.cm.ui.cars.CarsViewHolder" />
+  </data>
+
+  <android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?selectableItemBackground"
+      app:cardCornerRadius="@dimen/cardview_default_radius"
+      app:cardElevation="@dimen/cardview_default_elevation">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <ImageView
+          android:id="@+id/cars_item_image"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginBottom="16dp"
+          android:background="@color/divider_dark"
+          android:scaleType="centerCrop"
+          app:layout_constraintBottom_toTopOf="@+id/cars_item_name"
+          app:layout_constraintDimensionRatio="h,16:9"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_chainStyle="packed"
+          android:image_url="@{vh.url}"/>
+
+      <com.giaquino.cm.common.widget.BaselineGridTextView
+          android:id="@+id/cars_item_name"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="16dp"
+          android:layout_marginStart="16dp"
+          android:ellipsize="end"
+          android:lines="1"
+          android:maxLines="1"
+          android:text="@{vh.name}"
+          android:textAppearance="@style/My.TextAppearance.Subhead"
+          android:textSize="15sp"
+          app:layout_constraintBottom_toTopOf="@+id/cars_item_mileage"
+          app:layout_constraintEnd_toStartOf="@+id/cars_item_price"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/cars_item_image"
+          app:layout_constraintVertical_chainStyle="packed"
+          tools:text="Ford Ranger 2018" />
+
+      <com.giaquino.cm.common.widget.BaselineGridTextView
+          android:id="@+id/cars_item_price"
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_marginEnd="16dp"
+          android:gravity="right"
+          android:text="@{vh.price}"
+          android:textAppearance="@style/My.TextAppearance.Subhead"
+          android:textColor="?colorPrimary"
+          android:textSize="15sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/cars_item_name"
+          app:layout_constraintTop_toTopOf="@+id/cars_item_name"
+          tools:text="IDR 6,000,000.00" />
+
+      <com.giaquino.cm.common.widget.BaselineGridTextView
+          android:id="@+id/cars_item_mileage"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:layout_marginEnd="16dp"
+          android:layout_marginStart="16dp"
+          android:text="@{vh.mileage}"
+          android:textAppearance="@style/My.TextAppearance.Body1"
+          android:textColor="?android:textColorSecondary"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/cars_item_name"
+          app:layout_constraintVertical_chainStyle="packed"
+          tools:text="Mileage 12,000 Km" />
+
+      <ImageView
+          android:id="@+id/cars_item_premium"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:tint="?colorAccent"
+          android:visibility="@{vh.premium}"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/ic_start" />
+    </android.support.constraint.ConstraintLayout>
+  </android.support.v7.widget.CardView>
+</layout>

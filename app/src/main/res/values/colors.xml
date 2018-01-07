@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="primary">#3F51B5</color>
+  <color name="primary_dark">#303F9F</color>
+  <color name="accent">#FF4081</color>
+  <color name="text_primary_light">#ffffffff</color>
+  <color name="text_secondary_light">#b3ffffff</color> <!-- 70% -->
+  <color name="text_disabled_light">#80ffffff</color> <!-- 50% -->
+  <color name="divider">#1fffffff</color> <!-- 12% -->
+  <color name="text_primary_dark">#de000000</color> <!-- 87% -->
+  <color name="text_secondary_dark">#8a000000</color> <!-- 54% -->
+  <color name="text_disabled_dark">#61000000</color> <!-- 38% -->
+  <color name="divider_dark">#1f000000</color> <!-- 12% -->
+</resources>

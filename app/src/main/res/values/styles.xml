@@ -1,0 +1,48 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="My.Theme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary_dark</item>
+    <item name="colorAccent">@color/accent</item>
+    <item name="android:textColorPrimary">@color/text_primary_dark</item>
+    <item name="android:textColorSecondary">@color/text_secondary_dark</item>
+    <item name="android:textColorTertiary">@color/text_disabled_dark</item>
+  </style>
+
+  <style name="My.TextAppearance.Display4" parent="TextAppearance.AppCompat.Display4" />
+
+  <style name="My.TextAppearance.Display3" parent="TextAppearance.AppCompat.Display3" />
+
+  <style name="My.TextAppearance.Display2" parent="TextAppearance.AppCompat.Display2">
+    <item name="lineHeightHint">48sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Display1" parent="TextAppearance.AppCompat.Display1">
+    <item name="lineHeightHint">40sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Headline" parent="TextAppearance.AppCompat.Headline">
+    <item name="lineHeightHint">32sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Title" parent="TextAppearance.AppCompat.Title" />
+
+  <style name="My.TextAppearance.Subhead" parent="TextAppearance.AppCompat.Subhead">
+    <item name="lineHeightHint">24sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Body1" parent="TextAppearance.AppCompat.Body1">
+    <item name="lineHeightHint">20sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Body2" parent="TextAppearance.AppCompat.Body2">
+    <item name="lineHeightHint">24sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Button" parent="TextAppearance.AppCompat.Button">
+  </style>
+
+  <style name="My.TextAppearance.Caption" parent="TextAppearance.AppCompat.Caption" />
+</resources>

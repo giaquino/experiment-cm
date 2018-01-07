@@ -1,0 +1,11 @@
+{
+	"success": false,
+	"messages": {
+		"error": ["Server error: `POST http:\/\/api-search-tier1-prod.ap-southeast-1.elasticbeanstalk.com\/1\/search\/ID\/ba\/listings?agg=0` resulted in a `500 Internal Server Error` response:\n{\"success\":false,\"message\":\"Result window is too large, from + size must be less than or equal to: [1000000] but was [10 (truncated...)\n"]
+	},
+	"session": {
+		"id": "mgcuf1f41ge3kgp7v0hkd1oqb0",
+		"expire": "",
+		"YII_CSRF_TOKEN": "f51f40eac2cbdf0acfba5e2b4649ec9cdaf857a7"
+	}
+}
