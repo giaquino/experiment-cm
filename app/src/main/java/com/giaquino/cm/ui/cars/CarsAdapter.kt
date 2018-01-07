@@ -45,22 +45,20 @@ class CarsAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        if (holder is CarsViewHolder) {
-            getItem(position)?.apply { holder.bind(this) }
-        } else if (holder is RetryViewHolder) {
-            holder.setMessage(retryMessage)
+        when (holder) {
+            is CarsViewHolder -> getItem(position)?.apply { holder.bind(this) }
+            is RetryViewHolder -> holder.setMessage(retryMessage)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        if (viewType == R.layout.view_list_loading) {
-            return LoadingViewHolder.create(parent)
-        } else if (viewType == R.layout.view_list_retry) {
-            return RetryViewHolder.create(parent).apply {
+        return when (viewType) {
+            R.layout.view_list_loading -> LoadingViewHolder.create(parent)
+            R.layout.view_list_retry -> RetryViewHolder.create(parent).apply {
                 setOnRetryListener(View.OnClickListener { retryCallback.invoke() })
             }
+            else -> CarsViewHolder.create(parent)
         }
-        return CarsViewHolder.create(parent)
     }
 
     fun setLoading() {

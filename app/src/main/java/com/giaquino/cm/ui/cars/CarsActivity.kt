@@ -84,7 +84,6 @@ class CarsActivity : BaseActivity() {
                 rect.bottom = margin
             }
         })
-        binding.carsActivityList.setHasFixedSize(false)
     }
 
     private fun initializeRefreshIndicator() {
